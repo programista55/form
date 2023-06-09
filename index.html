@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script defer src="js/script.js"></script>
+    <title>Project 1</title>
+</head>
+<body class="style__body">
+       <form action="https://postman-echo.com/post" method="post" enctype="multipart/form-data" class="form">
+        <fieldset class="form__fieldset">
+            <legend class="form__legend">Twoje dane</legend>
+        <p><label for="imie" class="form__labelText" >Imię: </label> 
+        <input  class="form__input" type="text" name="imie" id="imie" placeholder="Podaj imię" autofocus> </p>
+        <p><label for="email" class="form__labelText" >E-mail: </label> 
+        <input  class="form__input" type="email" name="email" id="email"> </p>
+        <p><label for="haslo" class="form__labelText">Hasło: </label> 
+        <input class="form__input" type="password" name="haslo" id="haslo" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}"> </p>
+        <p><label for="wzrost" class="form__labelText" >Wzrost: </label> 
+        <input class="form__input" type="number" name="wzrost" id="wzrost" min="1" max="280" step="0.5"> </p>
+        <p>Ulubione zwierze:</p>
+        <ul class="form__ul">
+            <li class="form__li">
+               <label> <input type="checkbox" name="kot" value="kot">Kot </label>
+            </li>
+            <li class="form__li">
+                <label> <input type="checkbox" name="pies" value="pies">Pies </label>
+            </li>
+            <li class="form__li">
+                 <label> <input type="checkbox" name="mysz" value="mysz">Mysz </label>
+            </li>
+        </ul>
+        <p>Ulubione owoc:</p>
+        <ul class="form__ul">
+            <li class="form__li">
+               <label> <input type="radio" name="owoc" value="jablko">Jabłko </label>
+            </li>
+            <li class="form__li">
+                <label> <input type="radio" name="owoc" value="gruszka">Gruszka </label>
+            </li>
+            <li class="form__li">
+                 <label> <input type="radio" name="owoc" value="banan">Banan </label>
+            </li>
+        </ul>
+        <p>
+            <label for="plec" class="form__labelText">Płeć: </label>
+            <select class="form__input" name="plec" id="plec">
+                    <option value="kobieta">kobieta</option>
+                    <option value="mezczyzna">mężczyzna</option>
+                    <option value="inna">inna</option>
+            </select>
+        </p>
+        <p>
+            <label for="auto" class="form__labelText" >Auto: </label>
+            <input  class="form__input" name="auto" id="auto" list="marki">
+            <datalist id="marki">
+                <option>BMW</option>
+                <option>Audi</option>
+                <option>Opel</option>
+            </datalist>
+        </p>
+        <p><label for="cv" class="form__labelText">Wyślij CV : </label>
+        <input  class="form__input" type="file" name="cv" id="cv"></p>
+        <p><label for="data" class="form__labelText" >Data: </label> 
+        <input  class="form__input js-date" name="data" id="data"> </p>
+        <textarea  class="form__input form__input--textarea" name="opinia" id="opinia" placeholder="Twoja opinia"></textarea>
+        </fieldset>
+        <p><button class="form__button">Wyślij</button>
+        <button class="form__button" type="reset">Reset</button></p>
+       </form>
+</body>
+</html>
